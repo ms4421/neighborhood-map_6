@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Salons Near You</title>
+		<!--link rel="stylesheet"  href="css/bootstrap.min.css" /-->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel='stylesheet'  href="css/style.css">
+	</head>
+<body>
+	<div class="container">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-center">
+					<h1 calss="title-super text-thin">Nearby Salons</h1>
+				</div>
+				<div class="col-md-6 text-right">
+					<img id="flkr-icon" src="img/icon3.png" alt="Logo" >
+  				</div>
+			</div>
+		</div>
+		<div class="row">
+			<hr>
+		</div>
+		<div class="container">
+			<div class="row"> 
+				<div class="col-md-9">
+					<div id="map-canvas">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div id="search-container" class="container-fluid" >
+						<input id="input" placeholder="Search…" type="input" data-bind=" textInput: searchString , valueUpdate: 'keydown'" ></input>
+						<div id="search-nav2" > 
+							<ul data-bind="foreach: observableMarkers">
+								<li >						
+									<strong data-bind="text: name"></strong>
+									<p id="rate" data-bind="text: rating"></p>
+								</li>
+							</ul>
+						</div>
+						<div id="search-nav" >
+							<div id="lists">
+								<ul data-bind="template: {name: 'marker', foreach:markers}">
+								</ul>
+								<script type="text/html" id="marker">
+									<div data-bind="visible: showFlag">
+										<li id="myList">
+											<strong data-bind="text: name"></strong>
+											<p id="rate" data-bind="text: rating"></p>
+										</li>
+									</div>
+								</script>    
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <div class="modal">
+        <div class="modal-images">
+			<br>
+			<div id="exit" class="glyphicon glyphicon-remove-circle"></div>
+			<span id="arrows">
+				<div id="lArrow" class="glyphicon glyphicon-menu-left" aria-hidden="true">
+				</div>
+				<div id="rArrow" class="glyphicon glyphicon-menu-right" aria-hidden="true">
+				</div>
+			</span>
+			<br>
+            <div class="flckrContainer" onload="showNext"></div>
+        </div> 
+    </div>
+	</div>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+	<script 
+      src="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false">
+    </script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script  src="js/lib/knockout-3.3.0.min.js"></script>
+    <script async  src="js/main.js"></script>
+	<script async src="js/flkrapi.js"></script>
+	<script>
+		
+	</script>
+</body>
+</html>

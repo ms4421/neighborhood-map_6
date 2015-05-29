@@ -1,0 +1,96 @@
+body{
+	font-family: 'Lato', sans-serif;
+	color: black;
+	font-weight: 300;
+    background-color: #BCBBBB;
+}
+.text-muted{
+	color: #BCBBBB;
+}
+.text-thin{
+	font-weight:100;
+}
+.title-super{
+	font-size:40px;
+}
+#map-canvas {
+      /*width: 70%;*/
+      height: 700px;
+}
+#search-container{
+	max-height: 700px;
+	background-color: #E8E8E8;
+}
+
+#search-nav{
+	max-height: 650px;
+	overflow-y: auto;
+}
+#search-nav2{
+	max-height: 650px;
+	overflow-y: auto;
+}
+#input{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+#lists {
+    margin-top: 5%;
+	 
+} 
+#rate{
+    color: red;
+    font-size: 25px;
+}
+
+{content:"\e258";}
+
+#flickr {
+    height: 70px;
+    width: 70px;
+    float: right;
+    margin: 6px 10px 0 0;
+	display: none;
+}
+
+.modal {
+	background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    height: 100%; 
+    z-index: 0;
+    display: none;
+	width: 50vw;
+	height: 70vw;
+	margin-right: 20%;
+	margin-left: 20%;
+	
+}
+
+.modal-images{
+	
+    opacity: 1.0;
+    z-index: 0;
+    margin: 12% auto;
+    background-color: rgba(200, 200, 200,.8);
+    
+   
+}
+#exit {
+	margin-left: 3%;
+	font-size: 1.2em;
+}
+#arrows {
+	font-size: 1.2em;
+	margin-left: 40%;
+	margin-right: 20%;
+	margin-top: 10%;
+}
+
+.flckrContainer img {
+	margin: auto;
+    overflow: hidden;
+    position: relative;
+    display: block;
+	height: auto;
+    
+}
